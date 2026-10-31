@@ -2,6 +2,16 @@ import ReactDOM from 'react-dom/client'
 import { RouterProvider } from '@tanstack/react-router'
 import { getRouter } from './router'
 import './styles.css'
+import { initSmoothScroll } from './lib/smooth-scroll'
+
+// Apply the saved theme before the first paint.
+try {
+  document.documentElement.classList.toggle('dark', localStorage.getItem('theme') === 'dark')
+} catch {
+  /* ignore */
+}
+
+initSmoothScroll()
 
 const router = getRouter()
 

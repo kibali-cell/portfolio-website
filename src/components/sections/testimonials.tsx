@@ -1,4 +1,5 @@
 import { TESTIMONIALS } from "@/data/portfolio";
+import { useT } from "@/lib/i18n";
 
 function initials(name: string) {
   return name
@@ -12,15 +13,16 @@ function initials(name: string) {
 const TINTS = ["bg-lavender", "bg-mint", "bg-sun", "bg-peach", "bg-sky"];
 
 export function TestimonialsSection() {
+  const t = useT();
   return (
     <section id="testimonials" className="section">
       <div className="max-w-3xl">
-        <span className="pill">Testimonials</span>
+        <span className="pill">{t("testi.pill")}</span>
         <h2 className="section-title mt-4">
-          Trusted by businesses to build systems that scale
+          {t("testi.title")}
         </h2>
         <p className="mt-4 body-text text-muted-foreground">
-          Hear from the leaders and individuals scaling their operations and growth with custom technical solutions.
+          {t("testi.sub")}
         </p>
       </div>
 

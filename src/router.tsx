@@ -9,6 +9,8 @@ export const getRouter = () => {
     routeTree,
     context: { queryClient },
     scrollRestoration: true,
+    // Hash targets are glided to by <HashScroll /> (smooth, header-aware).
+    defaultHashScrollIntoView: false,
     defaultPreloadStaleTime: 0,
   });
 

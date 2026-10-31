@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
-import { Link } from "@tanstack/react-router";
+import { HashLink } from "@/components/hash-link";
+import { useT } from "@/lib/i18n";
 
 export function StickyCta() {
+  const t = useT();
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -13,19 +15,14 @@ export function StickyCta() {
 
   return (
     <div
-      className={`fixed z-50 right-4 bottom-4 sm:right-6 sm:bottom-6 transition-all duration-300 ${
-        show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
+      className={`fixed bottom-4 right-4 z-50 transition-all duration-300 sm:bottom-6 sm:right-6 ${
+        show ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-4 opacity-0"
       }`}
     >
-      <Link
-        to="/"
-        hash="contact"
-        className="btn-dark py-3 px-5 text-sm shadow-lg"
-        aria-label="Start a project"
-      >
-        Start a project
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-      </Link>
+      <HashLink id="contact" className="btn-dark px-5 py-3 text-sm shadow-lg" aria-label={t("sticky.cta")}>
+        {t("sticky.cta")}
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
+      </HashLink>
     </div>
   );
 }
