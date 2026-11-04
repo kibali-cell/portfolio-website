@@ -85,23 +85,6 @@ export const PROJECTS: Project[] = [
     stack: ["Laravel", "JavaScript", "ML service", "Docker"],
   },
   {
-    slug: "cpage",
-    name: "cPage",
-    tag: "Academic Cover Page Generator",
-    featured: true,
-    live: "https://cpage.co.tz/",
-    summary: `The most-used student productivity tool in Tanzania — ${STATS.users} users generating cover pages for ${STATS.universities} universities.`,
-    problem: "Every Tanzanian student wastes 30 minutes formatting a cover page for every assignment. Group assignments turn into a midnight admin nightmare.",
-    solution: [
-      `Templates for ${STATS.universities} Tanzanian universities`,
-      "Individual & Group modes with smart team management",
-      "Generates editable .docx files",
-      "Smart autofill for repeat information",
-      "Completely free with zero account creation required",
-    ],
-    stack: ["Next.js", "TypeScript", "Tailwind", "PostgreSQL"],
-  },
-  {
     slug: "safari-tours",
     name: "Native Kilimanjaro",
     img: safariShot,
