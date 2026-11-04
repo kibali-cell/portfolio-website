@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader, SiteFooter } from "@/components/site-chrome";
 import { HashLink } from "@/components/hash-link";
-import { SKILLS, STATS } from "@/data/portfolio";
+import { SKILLS, STATS, SITE } from "@/data/portfolio";
 import { useT } from "@/lib/i18n";
 import { useLocalized } from "@/lib/localize";
-import jonasAvatar from "@/assets/jonas-avatar.png";
+import jonasAvatar from "@/assets/jonas-avatar.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -36,7 +36,10 @@ function AboutPage() {
             <h1 className="display mt-4 max-w-3xl text-balance text-[clamp(2.25rem,5.5vw,4.25rem)]">{t("about.title")}</h1>
             <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">{t("about.body1")}</p>
             <p className="mt-4 max-w-2xl leading-relaxed text-muted-foreground">{t("about.body2")}</p>
-            <HashLink id="contact" className="btn-dark mt-7 px-6 py-3 text-sm">{t("about.cta")}</HashLink>
+            <div className="mt-7 flex flex-wrap items-center gap-3">
+              <HashLink id="contact" className="btn-dark px-6 py-3 text-sm">{t("about.cta")}</HashLink>
+              <a href={SITE.cv} download className="btn-ghost px-6 py-3 text-sm">{t("cv.download")}</a>
+            </div>
           </div>
           <img src={jonasAvatar} alt="Jonas Kiwia" className="aspect-square w-full max-w-sm rounded-[2rem] object-cover shadow-lg lg:ml-auto" />
         </section>

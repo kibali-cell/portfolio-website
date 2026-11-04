@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { ProjectImage } from "@/components/project-image";
+import { ProjectGallery } from "@/components/project-gallery";
 import { ProjectLinks } from "@/components/project-links";
 import { PROJECTS, type Project } from "@/data/portfolio";
 import { useT } from "@/lib/i18n";
@@ -69,6 +70,8 @@ function ProjectDialog({ p, onClose }: { p: Project | null; onClose: () => void 
                   <span key={s} className="pill">{s}</span>
                 ))}
               </div>
+
+              <ProjectGallery p={p} className="mt-6" />
 
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
                 <div className="rounded-[1rem] border border-border p-5">

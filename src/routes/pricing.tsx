@@ -9,9 +9,9 @@ export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
       { title: "Pricing — Jonas Kiwia" },
-      { name: "description", content: "Transparent website and web-system pricing in USD and TZS — from a $480 landing page to custom platforms." },
+      { name: "description", content: "Transparent website and web-system pricing in TSh and USD — from a TSh 1.2M landing page to custom platforms." },
       { property: "og:title", content: "Pricing — Jonas Kiwia" },
-      { property: "og:description", content: "Transparent website and web-system pricing in USD and TZS." },
+      { property: "og:description", content: "Transparent website and web-system pricing in TSh and USD." },
     ],
   }),
   component: PricingPage,

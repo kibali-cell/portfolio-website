@@ -4,7 +4,7 @@ import { ProjectImage } from "@/components/project-image";
 import { GithubIcon, MailIcon, WhatsappIcon, ArrowRightIcon } from "@/components/icons";
 import { PROJECTS, SITE, STATS, type Project } from "@/data/portfolio";
 import { useT } from "@/lib/i18n";
-import jonasAvatar from "@/assets/jonas-avatar.png";
+import jonasAvatar from "@/assets/jonas-avatar.jpg";
 
 /** A project preview in a minimal browser frame (one border, nothing nested). */
 function Frame({ p, className = "" }: { p: Project; className?: string }) {
@@ -38,11 +38,11 @@ export function Hero() {
     { label: t("hero.email"), href: `mailto:${SITE.email}`, Icon: MailIcon },
     { label: t("hero.whatsapp"), href: `https://wa.me/${SITE.whatsapp}`, Icon: WhatsappIcon },
   ];
-  // const proof = [
-  //   { n: STATS.usersShort, l: t("hero.statUsers") },
-  //   { n: STATS.universities, l: t("hero.statUnis") },
-  //   { n: STATS.clients, l: t("hero.statClients") },
-  // ];
+  const proof = [
+    { n: STATS.usersShort, l: t("hero.statUsers") },
+    { n: STATS.universities, l: t("hero.statUnis") },
+    { n: STATS.clients, l: t("hero.statClients") },
+  ];
 
   return (
     <section className="mx-auto max-w-7xl px-4 pb-8 pt-4 sm:px-5 md:px-8 md:pb-10 md:pt-6">
@@ -115,23 +115,27 @@ export function Hero() {
               <HashLink id="contact" className="btn-ghost px-6 py-3.5 text-base">
                 {t("hero.cta2")}
               </HashLink>
+              <a href={SITE.cv} download className="inline-flex items-center gap-2 px-2 py-3.5 text-base font-medium text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline">
+                {t("cv.download")}
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="M12 3v12m0 0l-5-5m5 5l5-5M5 21h14" /></svg>
+              </a>
             </div>
 
-            {/* <dl className="mt-9 grid max-w-lg grid-cols-3 gap-4 border-t border-border pt-6">
+            <dl className="mt-9 grid max-w-lg grid-cols-3 gap-4 border-t border-border pt-6">
               {proof.map((x) => (
                 <div key={x.l}>
                   <dt className="display text-3xl sm:text-4xl">{x.n}</dt>
                   <dd className="mt-1 text-xs leading-snug text-muted-foreground">{x.l}</dd>
                 </div>
               ))}
-            </dl> */}
+            </dl>
           </div>
 
           {/* ---- right: work, fanned out ---- */}
           <div className="relative h-[250px] sm:h-[340px] lg:h-[440px]" aria-hidden={false}>
             <Frame p={by("safari-tours")} className="left-0 top-[14%] w-[52%] -rotate-6 float-a" />
-            <Frame p={by("ipf-meals")} className="right-0 top-0 w-[56%] rotate-5 float-b" />
-            <Frame p={by("cpage")} className="left-[16%] top-[34%] z-20 w-[68%] -rotate-1" />
+            <Frame p={by("swahili-sms-filter")} className="right-0 top-0 w-[56%] rotate-5 float-b" />
+            <Frame p={kitu} className="left-[16%] top-[34%] z-20 w-[68%] -rotate-1" />
           </div>
         </div>
       </div>

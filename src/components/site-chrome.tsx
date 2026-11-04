@@ -175,6 +175,7 @@ export function SiteFooter() {
             <li><a href={SITE.github} target="_blank" rel="noreferrer" className="hover:text-foreground">GitHub · kibali-cell</a></li>
             <li><a href={SITE.githubAlt} target="_blank" rel="noreferrer" className="hover:text-foreground">GitHub · JonasDeo</a></li>
             <li><a href={`https://wa.me/${SITE.whatsapp}`} target="_blank" rel="noreferrer" className="hover:text-foreground">WhatsApp</a></li>
+            <li><a href={SITE.cv} download className="hover:text-foreground">{t("cv.download")}</a></li>
             <li><a href={`mailto:${SITE.email}`} className="hover:text-foreground">{t("footer.email")}</a></li>
           </ul>
         </div>

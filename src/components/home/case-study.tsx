@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { GithubIcon, ArrowRightIcon } from "@/components/icons";
-import { PROJECTS, STATS } from "@/data/portfolio";
+import { PROJECTS } from "@/data/portfolio";
 import { useT } from "@/lib/i18n";
 
 export function CaseStudySection() {
@@ -74,11 +74,11 @@ export function CaseStudySection() {
         <div className="mt-5 flex flex-wrap items-center justify-between gap-4 rounded-[1.25rem] bg-lavender p-6 md:p-8">
           <div className="max-w-2xl">
             <p className="font-bold">
-              {t("case.cpageTitle")} · {STATS.users}
+              {t("case.cpageTitle")} · {t("case.status")}
             </p>
             <p className="mt-1 text-sm text-foreground/75">{t("case.cpageBody")}</p>
           </div>
-          <Link to="/projects/$slug" params={{ slug: "cpage" }} className="inline-flex items-center gap-2 text-sm font-semibold">
+          <Link to="/projects/$slug" params={{ slug: kitu.slug }} className="inline-flex items-center gap-2 text-sm font-semibold">
             {t("case.cpageLink")}
             <ArrowRightIcon size={14} />
           </Link>

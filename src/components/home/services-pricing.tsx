@@ -32,8 +32,8 @@ export function TierCard({ tier }: { tier: (typeof TIERS)[number] }) {
         ))}
       </ul>
       <div className="mt-6 border-t border-border pt-5">
-        <p className="font-bold">{x.usd}</p>
-        <p className="text-xs text-muted-foreground">{x.tzs}</p>
+        <p className="font-bold">{x.tzs}</p>
+        <p className="text-xs text-muted-foreground">≈ {x.usd}</p>
         <HashLink id="contact" className={`mt-4 inline-flex w-full justify-center ${x.featured ? "btn-dark" : "btn-ghost"}`}>
           {t("pricing.start")}
         </HashLink>

@@ -1,3 +1,12 @@
+import kituShot from "@/assets/project-kitu.jpg";
+import smsShot from "@/assets/project-sms-filter.jpg";
+import safariShot from "@/assets/project-safari.jpg";
+import kituDash from "@/assets/kitu-dashboard.jpg";
+import kituLogin from "@/assets/kitu-login.jpg";
+import safariHome from "@/assets/safari-home.jpg";
+import safariTours from "@/assets/safari-tours.jpg";
+import safariAdmin from "@/assets/safari-admin.jpg";
+
 
 
 /**
@@ -16,6 +25,8 @@ export const SITE = {
    * triggers an activation email to this address: click "Activate" once.
    * To use another service (Formspree, Web3Forms…), change this URL.
    */
+  /** CV file. Drop your PDF into /public with this exact name. */
+  cv: "/Jonas-Kiwia-CV.pdf",
   formEndpoint: "https://formsubmit.co/ajax/jonasdeo02@gmail.com",
 } as const;
 
@@ -43,6 +54,8 @@ export type Project = {
   name: string;
   tag: string;
   img?: string;
+  /** extra screenshots shown on the project page and in the pop-up */
+  gallery?: string[];
   featured?: boolean;
   live?: string;
   github?: string;
@@ -56,6 +69,8 @@ export const PROJECTS: Project[] = [
   {
     slug: "kitu-analytics",
     name: "Kitu Analytics",
+    img: kituShot, // demo data, real UI
+    gallery: [kituLogin, kituDash],
     tag: "SME Bookkeeping & Credit Analytics",
     featured: true,
     github: gh("JonasDeo", "Kitu-Analytics"),
@@ -88,11 +103,13 @@ export const PROJECTS: Project[] = [
   },
   {
     slug: "safari-tours",
-    name: "Safari Tours",
+    name: "Native Kilimanjaro",
+    img: safariShot,
+    gallery: [safariHome, safariTours, safariAdmin],
     tag: "Safari Tour Platform",
     featured: true,
     github: gh("JonasDeo", "Safari-Tours"),
-    live: "https://native-kilimanjaro.vercel.app",
+    live: "https://nativekilimanjaro.com",
     summary: "A platform for showcasing African safari destinations, managing tour operations and building trips.",
     problem: "Tour companies need a beautiful way to show destinations and a simple way to turn interest into booked trips.",
     solution: [
@@ -105,6 +122,7 @@ export const PROJECTS: Project[] = [
   {
     slug: "swahili-sms-filter",
     name: "Swahili SMS Spam Filter",
+    img: smsShot,
     tag: "Android · Machine Learning",
     featured: true,
     github: gh("kibali-cell", "swahili-sms-filter-android"),
@@ -188,64 +206,6 @@ export const PROJECTS: Project[] = [
     solution: ["Cross-platform mobile storefront", "Smooth browsing and checkout flow", "Single Flutter codebase"],
     stack: ["Flutter", "Dart"],
   },
-  {
-    slug: "wifi-billing",
-    name: "Wi-Fi Billing System",
-    tag: "MikroTik Hotspot Billing & Vouchers",
-    summary: "Hotspot billing platform for ISPs running MikroTik routers — voucher generation, plans, and revenue reporting.",
-    problem: "Small ISPs were juggling MikroTik CLI, spreadsheets and printed vouchers to bill hotspot customers.",
-    solution: [
-      "Voucher generation with printable batches",
-      "MikroTik RADIUS integration",
-      "Revenue and usage dashboards",
-      "Multi-hotspot support",
-    ],
-    stack: ["PHP", "MySQL", "MikroTik API", "Tailwind"],
-  },
-  {
-    slug: "maconet",
-    name: "Maconet Agribusiness",
-    tag: "Agribusiness Marketing & Investment Platform",
-    live: "https://www.mass.co.tz/",
-    summary: "Marketing site and investor portal for a Tanzanian agribusiness fund.",
-    problem: "Maconet needed a credible online presence to attract diaspora investors and share farm updates.",
-    solution: [
-      "Investor-focused marketing pages",
-      "News & updates section",
-      "Contact & investment enquiry flow",
-      "Mobile-first responsive design",
-    ],
-    stack: ["Next.js", "Tailwind", "Sanity CMS"],
-  },
-  {
-    slug: "trinity",
-    name: "Trinity",
-    tag: "Poultry POS",
-    summary: "Point-of-sale and inventory system built for a Tanzanian poultry retail chain.",
-    problem: "The business was tracking sales, feed stock and bird counts in a mix of notebooks and WhatsApp messages.",
-    solution: [
-      "Fast POS with barcode & quick keys",
-      "Feed & stock inventory tracking",
-      "Daily/weekly revenue reports",
-      "Role-based staff accounts",
-    ],
-    stack: ["PHP", "MySQL", "Bootstrap"],
-  },
-  {
-    slug: "exchange-safaris",
-    name: "Exchange Safaris & Tours",
-    tag: "Travel & Courier Services Website",
-    live: "https://exchangesafaris.co.tz/",
-    summary: "Website and booking flow for a Tanzanian safari and courier company.",
-    problem: "Bookings were entirely over phone — no online catalog, no lead capture, no way to share tour packages.",
-    solution: [
-      "Tour package catalog with rich imagery",
-      "Booking / quote request forms",
-      "Courier service pages",
-      "SEO-focused route pages",
-    ],
-    stack: ["Next.js", "Tailwind", "Node.js"],
-  },
 ];
 
 export const getProject = (slug: string) => PROJECTS.find((p) => p.slug === slug);
@@ -307,13 +267,13 @@ export const PROCESS_STEPS = [
 
 /* ---------------- PRICING ---------------- */
 export const TIERS = [
-  { n: "1", time: "3–7 days", title: "Starter Landing Page", desc: "A simple fixed-content page for small businesses that need a clean online presence.", best: "Small businesses needing a simple page", features: ["One-page website", "Responsive design", "Business info section", "Contact section", "Basic SEO setup"], usd: "$480 – $690", tzs: "1.2M – 1.7M TZS" },
-  { n: "2", time: "1–2 weeks", title: "Managed Business Website", desc: "A small business website with an admin area for updating content like services, blogs, or products.", best: "Businesses that want to update without calling a dev", features: ["Responsive website", "Admin dashboard", "Editable content", "Blog or product section", "Contact section"], usd: "$1,500 – $2,350", tzs: "3.7M – 5.8M TZS" },
-  { n: "3", time: "3–5 weeks", title: "Custom Business System", desc: "A web-based operations system built around how your business works — POS, inventory, bookings, records, and CRM.", best: "Businesses needing POS, inventory, booking or CRM", features: ["Admin dashboard", "User accounts", "Database system", "Reports section", "Business workflow tools"], usd: "$7,300 – $12,100", tzs: "18M – 30M TZS", featured: true },
-  { n: "4", time: "5–8 weeks", title: "E-Commerce Website", desc: "A complete online store for selling products or services with payment and order management.", best: "Businesses selling products or services online", features: ["Product catalog", "Shopping cart", "Order management", "Mobile money payments", "Admin dashboard"], usd: "$4,700 – $8,150", tzs: "11.7M – 20M TZS" },
-  { n: "5", time: "8–12+ weeks", title: "Custom Web Application", desc: "A fully tailored platform built around your workflows — SaaS products, MVPs, portals, and complex internal systems.", best: "Startups needing a custom platform, SaaS or MVP", features: ["Custom architecture", "Advanced features", "Scalable backend", "Role-based access", "Consultation & planning"], usd: "$18,000 – $35,800", tzs: "45M – 90M TZS" },
-  { n: "6", time: "1–3 months", title: "SEO Services", desc: "Search engine optimization to improve website visibility and attract organic traffic.", best: "Businesses looking to rank higher on Google", features: ["Keyword optimization", "On-page SEO", "Performance monitoring", "SEO reporting"], usd: "$430 – $1,050", tzs: "1M – 2.6M TZS" },
-  { n: "7", time: "Monthly", title: "Website Maintenance", desc: "Ongoing support to keep your site secure, updated, and running — bug fixes, backups, and uptime monitoring.", best: "Existing website owners wanting peace of mind", features: ["Bug fixes", "Content updates", "Backups", "Uptime monitoring"], usd: "$110 – $240 / mo", tzs: "275k – 600k TZS / mo" },
+  { n: "1", time: "3–7 days", title: "Starter Landing Page", desc: "A simple fixed-content page for small businesses that need a clean online presence.", best: "Small businesses needing a simple page", features: ["One-page website", "Responsive design", "Business info section", "Contact section", "Basic SEO setup"], usd: "$480 – $690", tzs: "TSh 1.2M – 1.7M" },
+  { n: "2", time: "1–2 weeks", title: "Managed Business Website", desc: "A small business website with an admin area for updating content like services, blogs, or products.", best: "Businesses that want to update without calling a dev", features: ["Responsive website", "Admin dashboard", "Editable content", "Blog or product section", "Contact section"], usd: "$1,500 – $2,350", tzs: "TSh 3.7M – 5.8M" },
+  { n: "3", time: "3–5 weeks", title: "Custom Business System", desc: "A web-based operations system built around how your business works — POS, inventory, bookings, records, and CRM.", best: "Businesses needing POS, inventory, booking or CRM", features: ["Admin dashboard", "User accounts", "Database system", "Reports section", "Business workflow tools"], usd: "$7,300 – $12,100", tzs: "TSh 18M – 30M", featured: true },
+  { n: "4", time: "5–8 weeks", title: "E-Commerce Website", desc: "A complete online store for selling products or services with payment and order management.", best: "Businesses selling products or services online", features: ["Product catalog", "Shopping cart", "Order management", "Mobile money payments", "Admin dashboard"], usd: "$4,700 – $8,150", tzs: "TSh 11.7M – 20M" },
+  { n: "5", time: "8–12+ weeks", title: "Custom Web Application", desc: "A fully tailored platform built around your workflows — SaaS products, MVPs, portals, and complex internal systems.", best: "Startups needing a custom platform, SaaS or MVP", features: ["Custom architecture", "Advanced features", "Scalable backend", "Role-based access", "Consultation & planning"], usd: "$18,000 – $35,800", tzs: "TSh 45M – 90M" },
+  { n: "6", time: "1–3 months", title: "SEO Services", desc: "Search engine optimization to improve website visibility and attract organic traffic.", best: "Businesses looking to rank higher on Google", features: ["Keyword optimization", "On-page SEO", "Performance monitoring", "SEO reporting"], usd: "$430 – $1,050", tzs: "TSh 1M – 2.6M" },
+  { n: "7", time: "Monthly", title: "Website Maintenance", desc: "Ongoing support to keep your site secure, updated, and running — bug fixes, backups, and uptime monitoring.", best: "Existing website owners wanting peace of mind", features: ["Bug fixes", "Content updates", "Backups", "Uptime monitoring"], usd: "$110 – $240 / mo", tzs: "TSh 275k – 600k / mo" },
 ];
 
 /* ---------------- SKILLS ---------------- */
@@ -332,8 +292,10 @@ export const TESTIMONIALS = [
 
   { quote: "cPage simplifies the hustle of creating cover pages. It saves cost to students, exposes them to technology, and it just works.", name: "Felix Mselle", role: "Stationery Entrepreneur" },
   { quote: "I'm thoroughly impressed by the web development services Jonas provided. Professional, dedicated, and clear communication throughout.", name: "Lilian Mihale", role: "Health Counselor · Mihale Afya Clinic" },
+  { quote: "Jonas is passionate, dedicated, and highly talented. He successfully built a robust internal tool now used daily by our team.", name: "Grayson Julius", role: "Business Dev Director · iPF Softwares" },
   { quote: "The custom POS Jonas built has completely transformed our daily operations — fast, reliable, and drastically reduced our manual bookkeeping.", name: "Emmanuel M.", role: "Business Owner · Retail" },
   { quote: "Thoughtful in the way he builds products and open to collaboration. Working together on the Swahili AI project was smooth and productive.", name: "Inzari Senzia", role: "Content Engineer" },
+  { quote: "cPage has come in handy during strict deadlines. A quick fill-in and you're done — a genuine lifesaver for students.", name: "Plensia Lukosi", role: "Student & Data Analyst · UDOM" },
   { quote: "Good understanding of core software development principles. He breaks complex issues into simple, actionable steps.", name: "Jovin Shija", role: "Software Engineer · Nasiacademy" },
 ];
 
@@ -378,14 +340,14 @@ export const INSIGHTS: Insight[] = [
       "Website cost depends on what the website must do for the business. A focused landing page can start around $480, while managed business websites, e-commerce builds and custom web systems can range from $1,500 up to $35,800 depending on scope.",
     body: [
       { t: "p", text: "The honest answer to \u201chow much does a website cost in Tanzania?\u201d is: it depends entirely on what the website has to do for your business. A one-page site that introduces your company is a very different job from a dashboard that runs your daily operations \u2014 and the price follows the work, not the word \u201cwebsite\u201d." },
-      { t: "p", text: "Below are the ranges I actually quote, what each one includes, and how to tell which tier you need. Prices are in USD with the TZS equivalent, and every project is scoped in writing before any money changes hands." },
+      { t: "p", text: "Below are the ranges I actually quote, what each one includes, and how to tell which tier you need. Prices are in TZS with the USD equivalent, and every project is scoped in writing before any money changes hands." },
       { t: "h2", text: "The price ranges at a glance" },
       { t: "ul", items: [
-        "Starter Landing Page \u2014 $480 \u2013 $690 (about 1.2M \u2013 1.7M TZS), delivered in 3\u20137 days",
-        "Managed Business Website \u2014 $1,500 \u2013 $2,350 (3.7M \u2013 5.8M TZS), 1\u20132 weeks",
-        "Custom Business System (POS, inventory, CRM) \u2014 $7,300 \u2013 $12,100 (18M \u2013 30M TZS), 3\u20135 weeks",
-        "E-Commerce Website \u2014 $4,700 \u2013 $8,150 (11.7M \u2013 20M TZS), 5\u20138 weeks",
-        "Custom Web Application / SaaS \u2014 $18,000 \u2013 $35,800 (45M \u2013 90M TZS), 8\u201312+ weeks",
+        "Starter Landing Page \u2014 TSh 1.2M \u2013 1.7M (about $480 \u2013 $690), delivered in 3\u20137 days",
+        "Managed Business Website \u2014 TSh 3.7M \u2013 5.8M (about $1,500 \u2013 $2,350), 1\u20132 weeks",
+        "Custom Business System (POS, inventory, CRM) \u2014 TSh 18M \u2013 30M (about $7,300 \u2013 $12,100), 3\u20135 weeks",
+        "E-Commerce Website \u2014 TSh 11.7M \u2013 20M (about $4,700 \u2013 $8,150), 5\u20138 weeks",
+        "Custom Web Application / SaaS \u2014 TSh 45M \u2013 90M (about $18,000 \u2013 $35,800), 8\u201312+ weeks",
         "SEO Services \u2014 $430 \u2013 $1,050, over 1\u20133 months",
         "Website Maintenance \u2014 $110 \u2013 $240 per month",
       ] },

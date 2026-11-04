@@ -3,6 +3,7 @@ import { SiteHeader, SiteFooter } from "@/components/site-chrome";
 import { getProject, PROJECTS } from "@/data/portfolio";
 import { ProjectLinks } from "@/components/project-links";
 import { ProjectImage } from "@/components/project-image";
+import { ProjectGallery } from "@/components/project-gallery";
 import { useT } from "@/lib/i18n";
 import { useLocalized } from "@/lib/localize";
 
@@ -76,6 +77,12 @@ function ProjectDetail() {
             </div>
           </div>
         </section>
+
+        {p.gallery?.length ? (
+          <section className="mx-auto max-w-5xl px-5 md:px-8 pb-4">
+            <ProjectGallery p={p} />
+          </section>
+        ) : null}
 
         <section className="mx-auto max-w-7xl px-5 md:px-8 py-16 grid lg:grid-cols-2 gap-5">
           <div className="card-soft p-8">
