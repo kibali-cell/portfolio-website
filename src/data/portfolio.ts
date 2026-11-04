@@ -135,21 +135,6 @@ export const PROJECTS: Project[] = [
     stack: ["Laravel", "PHP", "MySQL", "REST API"],
   },
   {
-    slug: "ipf-meals",
-    name: "iPF Meals",
-    tag: "Meals Selection System",
-    featured: true,
-    summary: "Internal meal-selection & reminder system for iPF Softwares, powered by a Telegram bot and an admin dashboard.",
-    problem: "The team kept losing track of daily meal choices, and the admin was chasing people over WhatsApp every lunch hour.",
-    solution: [
-      "Telegram bot that pings each engineer to pick their meal",
-      "Admin dashboard to manage menus, orders and vendors",
-      "Daily reports exported to the operations team",
-      "Role-based accounts for admins, vendors, and staff",
-    ],
-    stack: ["Node.js", "Telegram Bot API", "MySQL", "React"],
-  },
-  {
     slug: "usalama-barabarani",
     name: "Usalama Barabarani",
     tag: "Android · Driving Education",
