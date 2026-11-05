@@ -258,15 +258,36 @@ export const SKILLS = [
 
 /* ---------------- TESTIMONIALS ---------------- */
 export const TESTIMONIALS = [
-  { quote: "Jonas understood the problem before we finished explaining it. The system he built replaced our spreadsheets and sped up monthly closing by days.", name: "Jonas Mshiu", role: "Director · TRP Construction" },
-
-  { quote: "cPage simplifies the hustle of creating cover pages. It saves cost to students, exposes them to technology, and it just works.", name: "Felix Mselle", role: "Stationery Entrepreneur" },
-  { quote: "I'm thoroughly impressed by the web development services Jonas provided. Professional, dedicated, and clear communication throughout.", name: "Lilian Mihale", role: "Health Counselor · Mihale Afya Clinic" },
-  { quote: "Jonas is passionate, dedicated, and highly talented. He successfully built a robust internal tool now used daily by our team.", name: "Grayson Julius", role: "Business Dev Director · iPF Softwares" },
-  { quote: "The custom POS Jonas built has completely transformed our daily operations — fast, reliable, and drastically reduced our manual bookkeeping.", name: "Emmanuel M.", role: "Business Owner · Retail" },
-  { quote: "Thoughtful in the way he builds products and open to collaboration. Working together on the Swahili AI project was smooth and productive.", name: "Inzari Senzia", role: "Content Engineer" },
-  { quote: "cPage has come in handy during strict deadlines. A quick fill-in and you're done — a genuine lifesaver for students.", name: "Plensia Lukosi", role: "Student & Data Analyst · UDOM" },
-  { quote: "Good understanding of core software development principles. He breaks complex issues into simple, actionable steps.", name: "Jovin Shija", role: "Software Engineer · Nasiacademy" },
+  {
+    quote: "Jonas did a great job developing our tours website. He was attentive to our ideas, open to feedback, and committed to bringing our vision online.",
+    name: "Theophil Kiwia",
+    role: "Native Kilimanjaro Safaris"
+  },
+  {
+    quote: "I had the opportunity to work with Jonas during the early stages of Kibalit. He brought technical ideas to the table and showed a genuine interest in building practical solutions to business problems.",
+    name: "Lucky Maro",
+    role: "Kibalit"
+  },
+  {
+    quote: "Working with Jonas on our tours website was a positive experience. He understood what we wanted to achieve and worked to translate our ideas into a functional online presence.",
+    name: "Balbina K.",
+    role: "Balbina Safaris"
+  },
+  {
+    quote: "I appreciate Jonas's dedication to software development and his ability to turn ideas into working digital solutions. His enthusiasm for technology is evident in the work he produces.",
+    name: "Emmanuel K.",
+    role: "Tourism"
+  },
+  {
+    quote: "Jonas is passionate about technology and consistently demonstrates a willingness to learn, build, and solve problems. I appreciate his commitment to developing useful digital solutions.",
+    name: "George Baraka",
+    role: "Professional Connection"
+  },
+  {
+    quote: "Did a great job bringing the e-commerce idea to life. He understood what we wanted, paid attention to the design and functionality, and delivered a website that makes the shopping experience feel more modern and straightforward.",
+    name: "Thomas Warburg",
+    role: "Enterprenuer"
+  }
 ];
 
 /* ---------------- INSIGHTS ---------------- */

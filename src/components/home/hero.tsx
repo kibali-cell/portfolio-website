@@ -121,14 +121,14 @@ export function Hero() {
               </a>
             </div>
 
-            <dl className="mt-9 grid max-w-lg grid-cols-3 gap-4 border-t border-border pt-6">
+            {/* <dl className="mt-9 grid max-w-lg grid-cols-3 gap-4 border-t border-border pt-6">
               {proof.map((x) => (
                 <div key={x.l}>
                   <dt className="display text-3xl sm:text-4xl">{x.n}</dt>
                   <dd className="mt-1 text-xs leading-snug text-muted-foreground">{x.l}</dd>
                 </div>
               ))}
-            </dl>
+            </dl> */}
           </div>
 
           {/* ---- right: work, fanned out ---- */}
