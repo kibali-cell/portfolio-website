@@ -34,10 +34,6 @@ export const SITE = {
  * Canonical numbers — change them here and they update everywhere.
  */
 export const STATS = {
-  users: "15,500+", // cPage active users (long form)
-  usersShort: "15.5K+", // same number, compact
-  universities: "50+",
-  coverPages: "17K+",
   clients: "10+",
   years: "5",
 } as const;
@@ -393,26 +389,23 @@ export const INSIGHTS: Insight[] = [
     ],
   },
   {
-    slug: "what-cpage-taught-me-about-building-products",
+    slug: "why-bookkeeping-comes-before-credit-scoring",
     category: "Case Study",
-    title: `What ${STATS.users.replace("+", "")} Students Taught Me About Building a Product People Actually Use`,
+    title: "Why Bookkeeping Has to Come Before Credit Scoring: Lessons from Building Kitu Analytics",
     excerpt:
-      `cPage started as a personal frustration and grew to ${STATS.users} active users across ${STATS.universities} institutions with a zero marketing budget. These are the product lessons I now apply to every client project.`,
+      "Kitu Analytics is a bookkeeping, analytics and credit-insight platform for small businesses. Here is why it starts with simple record-keeping, and what that means for any business system I build.",
     body: [
-      { t: "p", text: `cPage is a cover page generator for Tanzanian university students. It began as a way to stop wasting 30 minutes formatting a cover page before every assignment, and it grew to ${STATS.users} active users across ${STATS.universities} institutions \u2014 with no marketing budget at all.` },
-      { t: "p", text: "I did not plan that growth. But looking back, a handful of decisions made the difference, and they apply just as well to a client\u2019s POS system as they do to a student tool." },
-      { t: "h2", text: "1. Start with a task that repeats" },
-      { t: "p", text: "Every student writes assignments all year, and every assignment needs a cover page. A small, painful, repeated task is a far better starting point than a big vague idea, because people feel the benefit every single time they use it." },
-      { t: "h2", text: "2. Remove every step between the user and the result" },
-      { t: "p", text: "cPage is completely free and needs no account. You pick your university, fill in your details and get a document. Every sign-up form I did not add was a user I did not lose." },
-      { t: "h2", text: "3. Output something people already use" },
-      { t: "p", text: "cPage generates editable .docx files. Students can open them in the tools they already have and tweak anything. A product that fits into an existing workflow gets adopted; one that asks people to change their habits gets ignored." },
-      { t: "h2", text: "4. Solve the awkward version of the problem" },
-      { t: "p", text: "Group assignments meant one person became the unofficial \u201ccover page person\u201d, chasing five classmates at midnight. Adding a group mode with smart team management removed that pain entirely, and it was one of the features students told their friends about most." },
-      { t: "h2", text: "5. Treat word-of-mouth as your growth metric" },
-      { t: "p", text: "With no budget for ads, the only marketing was people telling classmates \u201cjust use cPage\u201d. That forced me to make the first-time experience obvious and fast \u2014 if a new user could not finish in under a minute, the product failed." },
-      { t: "callout", title: "What I bring to client work", text: "I ask the same questions: what is the repeated painful task, what can be removed, what format do your people already use, and who is the awkward edge case? The answers usually shape the scope better than a feature list does." },
-      { t: "p", text: "You can see the full story, numbers and timeline in the cPage case study on the home page, or try the product yourself at cpage.co.tz." },
+      { t: "p", text: "Kitu Analytics is the product I am building right now. The goal is simple to say and hard to do: help a small business understand its own numbers and, in time, prove them to a lender. It is still in MVP development, so this is a story about decisions, not results." },
+      { t: "h2", text: "1. A credit score is only as good as the records behind it" },
+      { t: "p", text: "Most small businesses in Tanzania run on memory, notebooks and chat messages. A bank looking at that has nothing reliable to read. Any scoring model built on top of missing or messy data is guessing, so the records have to come first." },
+      { t: "h2", text: "2. Bookkeeping must be easier than the notebook" },
+      { t: "p", text: "If recording a sale takes longer than writing it down, the owner stops. So the first job of the product is not analytics or scoring \u2014 it is record-keeping an owner will actually use every day." },
+      { t: "h2", text: "3. Turn records into plain-language insight" },
+      { t: "p", text: "Owners do not need a dashboard full of charts. They need to know whether the business is healthy, what changed this week, and what to do next, in words they would use themselves \u2014 in English or Swahili." },
+      { t: "h2", text: "4. Keep the scoring service separate" },
+      { t: "p", text: "The credit-scoring model runs as its own service, apart from the app owners use. That lets the model change without touching the day-to-day product, and it keeps the whole stack easy to run in Docker with one command." },
+      { t: "callout", title: "What I bring to client work", text: "Before building anything I ask what the business records today, who will enter the data, and what decision the data should support. A system people keep using beats a clever one they abandon." },
+      { t: "p", text: "You can see the full case study on the home page, or read the project details and repository on the Kitu Analytics page." },
     ],
   },
   {

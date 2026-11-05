@@ -74,12 +74,12 @@ export function CaseStudySection() {
         <div className="mt-5 flex flex-wrap items-center justify-between gap-4 rounded-[1.25rem] bg-lavender p-6 md:p-8">
           <div className="max-w-2xl">
             <p className="font-bold">
-              {t("case.cpageTitle")} · {t("case.status")}
+              {t("case.kituTitle")} · {t("case.status")}
             </p>
-            <p className="mt-1 text-sm text-foreground/75">{t("case.cpageBody")}</p>
+            <p className="mt-1 text-sm text-foreground/75">{t("case.kituBody")}</p>
           </div>
-          <Link to="/projects/$slug" params={{ slug: kitu.slug }} className="inline-flex items-center gap-2 text-sm font-semibold">
-            {t("case.cpageLink")}
+          <Link to="/insights/$slug" params={{ slug: "why-bookkeeping-comes-before-credit-scoring" }} className="inline-flex items-center gap-2 text-sm font-semibold">
+            {t("case.kituLink")}
             <ArrowRightIcon size={14} />
           </Link>
         </div>

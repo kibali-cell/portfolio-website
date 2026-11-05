@@ -18,18 +18,6 @@ export const SW_PROJECTS: Record<string, { tag: string; summary: string; problem
       "Imewekwa kwenye Docker ili kila sehemu ifanye kazi vivyo hivyo kila mahali",
     ],
   },
-  cpage: {
-    tag: "Kitengeneza Ukurasa wa Jalada la Kazi za Chuo",
-    summary: `Zana ya wanafunzi inayotumika zaidi Tanzania — watumiaji ${STATS.users} wanaotengeneza kurasa za jalada kwa vyuo ${STATS.universities}.`,
-    problem: "Kila mwanafunzi wa Tanzania hupoteza dakika 30 kupanga ukurasa wa jalada kwa kila kazi. Kazi za vikundi huwa mzigo wa usiku wa manane.",
-    solution: [
-      `Violezo vya vyuo ${STATS.universities} vya Tanzania`,
-      "Hali ya mtu mmoja na ya kikundi yenye usimamizi mahiri wa timu",
-      "Hutengeneza faili za .docx zinazoharirika",
-      "Ujazaji wa kiotomatiki wa taarifa zinazojirudia",
-      "Bure kabisa bila kuhitaji kufungua akaunti",
-    ],
-  },
   "safari-tours": {
     tag: "Jukwaa la Safari za Utalii",
     summary: "Jukwaa la kuonyesha vivutio vya safari za Afrika, kusimamia shughuli za utalii na kupanga safari.",
@@ -251,10 +239,10 @@ export const SW_INSIGHTS: Record<string, { category: string; title: string; exce
     title: "Next.js dhidi ya WordPress kwa Biashara za Tanzania",
     excerpt: "WordPress mara nyingi ni chaguo zuri kwa tovuti zenye maudhui mengi zinazohitaji kuhariri kwa urahisi. Next.js kwa kawaida ni bora biashara inapohitaji kasi, mtiririko maalum, kurasa zinazolenga SEO, dashibodi, malango au nafasi ya kukua kuwa programu kamili.",
   },
-  "what-cpage-taught-me-about-building-products": {
+  "why-bookkeeping-comes-before-credit-scoring": {
     category: "Mfano wa Kazi",
-    title: `Wanafunzi ${STATS.users.replace("+", "")} Walivyonifundisha Kutengeneza Bidhaa Inayotumiwa Kweli`,
-    excerpt: `cPage ilianza kama kero binafsi na kukua hadi watumiaji hai ${STATS.users} kwenye vyuo ${STATS.universities} bila bajeti ya matangazo. Haya ndiyo mafunzo ya bidhaa ninayoyatumia kwenye kila mradi wa mteja.`,
+    title: "Kwa Nini Uhasibu Unatangulia Kupima Mikopo: Mafunzo kutoka Kutengeneza Kitu Analytics",
+    excerpt: "Kitu Analytics ni jukwaa la uhasibu, uchambuzi na maarifa ya mikopo kwa biashara ndogo. Hii ndiyo sababu inaanza na utunzaji rahisi wa kumbukumbu, na maana yake kwa kila mfumo wa biashara ninaoutengeneza.",
   },
   "spreadsheet-vs-custom-business-system": {
     category: "Mifumo ya Biashara",

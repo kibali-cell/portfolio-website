@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader, SiteFooter } from "@/components/site-chrome";
 import { HashLink } from "@/components/hash-link";
-import { SKILLS, STATS, SITE } from "@/data/portfolio";
+import { SKILLS, STATS, SITE, PROJECTS } from "@/data/portfolio";
 import { useT } from "@/lib/i18n";
 import { useLocalized } from "@/lib/localize";
-import jonasAvatar from "@/assets/jonas-avatar.jpg";
+import jonasAvatar from "@/assets/jonas-avatar.png";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -23,8 +23,8 @@ function AboutPage() {
   const L = useLocalized();
   const stats = [
     { n: STATS.years, l: t("about.expYears"), tint: "bg-lavender" },
-    { n: STATS.usersShort, l: t("about.users"), tint: "bg-mint" },
-    { n: STATS.universities, l: t("about.unis"), tint: "bg-sun" },
+    { n: STATS.clients, l: t("about.clients"), tint: "bg-mint" },
+    { n: `${PROJECTS.length}`, l: t("about.projects"), tint: "bg-sun" },
   ];
   return (
     <div className="flex min-h-screen flex-col">
@@ -38,7 +38,7 @@ function AboutPage() {
             <p className="mt-4 max-w-2xl leading-relaxed text-muted-foreground">{t("about.body2")}</p>
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <HashLink id="contact" className="btn-dark px-6 py-3 text-sm">{t("about.cta")}</HashLink>
-              <a href={SITE.cv} download className="btn-ghost px-6 py-3 text-sm">{t("cv.download")}</a>
+              <a href={SITE.cv} target="_blank" rel="noreferrer" className="btn-ghost px-6 py-3 text-sm">{t("cv.download")}</a>
             </div>
           </div>
           <img src={jonasAvatar} alt="Jonas Kiwia" className="aspect-square w-full max-w-sm rounded-[2rem] object-cover shadow-lg lg:ml-auto" />

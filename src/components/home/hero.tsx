@@ -4,7 +4,7 @@ import { ProjectImage } from "@/components/project-image";
 import { GithubIcon, MailIcon, WhatsappIcon, ArrowRightIcon } from "@/components/icons";
 import { PROJECTS, SITE, STATS, type Project } from "@/data/portfolio";
 import { useT } from "@/lib/i18n";
-import jonasAvatar from "@/assets/jonas-avatar.jpg";
+import jonasAvatar from "@/assets/jonas-avatar.png";
 
 /** A project preview in a minimal browser frame (one border, nothing nested). */
 function Frame({ p, className = "" }: { p: Project; className?: string }) {
@@ -39,9 +39,9 @@ export function Hero() {
     { label: t("hero.whatsapp"), href: `https://wa.me/${SITE.whatsapp}`, Icon: WhatsappIcon },
   ];
   const proof = [
-    { n: STATS.usersShort, l: t("hero.statUsers") },
-    { n: STATS.universities, l: t("hero.statUnis") },
+    { n: `${STATS.years}+`, l: t("hero.statYears") },
     { n: STATS.clients, l: t("hero.statClients") },
+    { n: `${PROJECTS.length}`, l: t("hero.statProjects") },
   ];
 
   return (
@@ -115,7 +115,7 @@ export function Hero() {
               <HashLink id="contact" className="btn-ghost px-6 py-3.5 text-base">
                 {t("hero.cta2")}
               </HashLink>
-              <a href={SITE.cv} download className="inline-flex items-center gap-2 px-2 py-3.5 text-base font-medium text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline">
+              <a href={SITE.cv} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-2 py-3.5 text-base font-medium text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline">
                 {t("cv.download")}
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="M12 3v12m0 0l-5-5m5 5l5-5M5 21h14" /></svg>
               </a>
