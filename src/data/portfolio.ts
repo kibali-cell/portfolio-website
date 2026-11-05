@@ -186,40 +186,145 @@ export type Service = {
   deliverables: string[];
 };
 
+
 export const SERVICES: Service[] = [
-  { slug: "custom-websites", n: "01", title: "Custom Business Websites",
-    short: "Fast, mobile-friendly websites for Tanzanian businesses — landing pages, service pages, and contact flows that convert.",
-    long: "I design and ship business websites focused on speed, SEO and clear conversion. Every page is built to be easy to update and easy for search engines to crawl.",
-    deliverables: ["Responsive design", "SEO foundations", "CMS or editable content", "Contact & lead capture", "Analytics setup"] },
-  { slug: "nextjs-react", n: "02", title: "Next.js & React Web Apps",
-    short: "Responsive web applications with React, Next.js and TypeScript — dashboards, SaaS products, client portals, and internal tools.",
-    long: "I build production React and Next.js applications for teams that need dashboards, SaaS surfaces, portals, and internal business tools.",
-    deliverables: ["Typed React + Next.js codebase", "Auth & role-based access", "Dashboards & reports", "Deploy pipeline", "Handover documentation"] },
-  { slug: "node-apis", n: "03", title: "Node.js APIs & Backends",
-    short: "Reliable Node.js APIs, SQL databases, authentication, permissions, integrations and reporting flows.",
-    long: "Behind every useful app is a reliable backend. I build REST APIs, database schemas, auth systems and integrations that stay maintainable as the product grows.",
-    deliverables: ["REST API design", "Database schema", "Auth, roles & permissions", "3rd-party integrations", "Monitoring & logging"] },
-  { slug: "planning-consulting", n: "04", title: "Technical Planning & Consulting",
-    short: "Choose the right technical plan, define realistic scope, and avoid expensive overbuilding before development starts.",
-    long: "I help founders and business owners pick the right stack, scope realistic MVPs, and review architecture before spending on development.",
-    deliverables: ["Technical scoping doc", "Stack & vendor recommendation", "Milestone plan", "Cost & timeline estimate"] },
-  { slug: "maintenance", n: "05", title: "Website Maintenance Tanzania",
-    short: "Deploy websites and web apps, keep them updated, monitor reliability, fix bugs, improve performance, and support changes after launch.",
-    long: "Ongoing technical support so your site stays fast, secure and running — bug fixes, content updates, backups and uptime monitoring.",
-    deliverables: ["Bug fixes", "Content updates", "Backups", "Uptime monitoring", "Monthly report"] },
-  { slug: "seo-performance", n: "06", title: "SEO & Performance",
-    short: "Improve page performance, metadata, headings, structured data, sitemap coverage, and technical SEO foundations.",
-    long: "Speed and crawlability matter. I audit and improve your site's Core Web Vitals, SEO fundamentals and structured data.",
-    deliverables: ["Lighthouse audit", "On-page SEO fixes", "Structured data", "Sitemap & robots", "Monthly performance report"] },
-  { slug: "api-integration", n: "07", title: "API Integration",
-    short: "Plan and build reliable integrations for payments, messaging, data services, and internal workflows.",
-    long: "Connect third-party services — payments, mobile money, messaging, CRMs — into your product with proper error handling and observability.",
-    deliverables: ["Integration design", "Sandbox + prod setup", "Webhooks & retries", "Error monitoring"] },
-  { slug: "debugging", n: "08", title: "Debugging",
-    short: "Investigate the cause, explain the tradeoff, and fix the problem — without turning it into a rebuild.",
-    long: "Got an issue with your current app? I diagnose the root cause, propose the smallest safe fix, and ship it.",
-    deliverables: ["Root cause report", "Targeted fix", "Regression test", "Follow-up recommendations"] },
+  {
+    slug: "business-websites",
+    n: "01",
+    title: "Business Websites",
+    short:
+      "Professional, mobile-friendly websites that help businesses establish an online presence, showcase their services, and attract customers.",
+    long:
+      "I design and develop custom websites for businesses that need more than a social media page. From landing pages to multi-page business websites, I focus on responsive design, clear navigation, and a strong presentation of your brand.",
+    deliverables: [
+      "Custom responsive design",
+      "Mobile-friendly layouts",
+      "Service and contact pages",
+      "Basic technical SEO",
+      "Contact forms and WhatsApp integration",
+      "Website deployment",
+    ],
+  },
+  {
+    slug: "web-applications",
+    n: "02",
+    title: "Web Applications",
+    short:
+      "Custom web applications for businesses that need dashboards, booking systems, management tools, or solutions beyond a traditional website.",
+    long:
+      "I build interactive web applications using React, TypeScript and Laravel. Whether you need an administrative dashboard, booking platform, customer portal, or business management system, I can help turn your requirements into a working application.",
+    deliverables: [
+      "Custom React interfaces",
+      "Backend and database development",
+      "REST API integration",
+      "Authentication and user management",
+      "Admin dashboards",
+      "Deployment and handover",
+    ],
+  },
+  {
+    slug: "backend-api-development",
+    n: "03",
+    title: "Backend & API Development",
+    short:
+      "Backend systems, REST APIs and database-driven functionality built with Laravel and Python.",
+    long:
+      "I develop the server-side functionality that powers web and mobile applications. This includes API endpoints, database structures, authentication, business logic and connections between different application components.",
+    deliverables: [
+      "Laravel backend development",
+      "Python and FastAPI development",
+      "REST API development",
+      "Database design and integration",
+      "Authentication and permissions",
+      "API documentation",
+    ],
+  },
+  {
+    slug: "api-integrations",
+    n: "04",
+    title: "API & Third-Party Integrations",
+    short:
+      "Connect your website or application to payment services, messaging platforms, maps and other external systems.",
+    long:
+      "I integrate external services into existing applications so different systems can communicate and exchange information. This includes working with API credentials, webhooks, request handling and integration testing.",
+    deliverables: [
+      "Third-party API integration",
+      "Payment gateway integration",
+      "Messaging and notification integrations",
+      "Google Maps and Places integration",
+      "Webhook implementation",
+      "Integration testing",
+    ],
+  },
+  {
+    slug: "website-maintenance",
+    n: "05",
+    title: "Website Maintenance & Support",
+    short:
+      "Keep your existing website working properly with technical updates, bug fixes, content changes and troubleshooting.",
+    long:
+      "Websites need attention after launch. I help businesses maintain their existing websites by investigating technical problems, fixing bugs, updating content and making improvements as their needs change.",
+    deliverables: [
+      "Bug fixes and troubleshooting",
+      "Content and image updates",
+      "Dependency updates",
+      "Performance improvements",
+      "Technical support",
+      "Backup configuration",
+    ],
+  },
+  {
+    slug: "seo-optimization",
+    n: "06",
+    title: "Website SEO & Optimization",
+    short:
+      "Improve your website's search engine foundations, loading performance and mobile experience.",
+    long:
+      "I help improve how websites are structured and presented to search engines. This includes technical SEO, metadata, page structure, sitemap configuration and performance improvements.",
+    deliverables: [
+      "Page titles and meta descriptions",
+      "Heading structure",
+      "Image optimization",
+      "Sitemap and robots.txt",
+      "Canonical URL configuration",
+      "Technical SEO improvements",
+    ],
+  },
+  {
+    slug: "website-redesign",
+    n: "07",
+    title: "Website Redesign",
+    short:
+      "Modernize an outdated website with a cleaner design, better navigation and an improved mobile experience.",
+    long:
+      "If your current website looks outdated, is difficult to navigate or doesn't represent your business properly, I can redesign its interface and improve its overall user experience while retaining relevant existing content.",
+    deliverables: [
+      "Existing website review",
+      "Modern UI redesign",
+      "Responsive layouts",
+      "Improved navigation",
+      "Content restructuring",
+      "Deployment of redesigned website",
+    ],
+  },
+  {
+    slug: "technical-consultation",
+    n: "08",
+    title: "Technical Consultation",
+    short:
+      "Get practical guidance on turning your business idea into a realistic software project.",
+    long:
+      "Not every business needs a complex application. I help clients understand their technical requirements, identify the features they actually need, and plan a practical development approach before committing to a project.",
+    deliverables: [
+      "Project requirements discussion",
+      "Feature and scope planning",
+      "Technology recommendations",
+      "Development roadmap",
+      "Initial cost and timeline estimate",
+    ],
+  },
 ];
+
 
 export const getService = (slug: string) => SERVICES.find((s) => s.slug === slug);
 
@@ -232,25 +337,217 @@ export const PROCESS_STEPS = [
 ];
 
 /* ---------------- PRICING ---------------- */
+
+/* ---------------- PRICING ---------------- */
 export const TIERS = [
-  { n: "1", time: "3–7 days", title: "Starter Landing Page", desc: "A simple fixed-content page for small businesses that need a clean online presence.", best: "Small businesses needing a simple page", features: ["One-page website", "Responsive design", "Business info section", "Contact section", "Basic SEO setup"], usd: "$480 – $690", tzs: "TSh 1.2M – 1.7M" },
-  { n: "2", time: "1–2 weeks", title: "Managed Business Website", desc: "A small business website with an admin area for updating content like services, blogs, or products.", best: "Businesses that want to update without calling a dev", features: ["Responsive website", "Admin dashboard", "Editable content", "Blog or product section", "Contact section"], usd: "$1,500 – $2,350", tzs: "TSh 3.7M – 5.8M" },
-  { n: "3", time: "3–5 weeks", title: "Custom Business System", desc: "A web-based operations system built around how your business works — POS, inventory, bookings, records, and CRM.", best: "Businesses needing POS, inventory, booking or CRM", features: ["Admin dashboard", "User accounts", "Database system", "Reports section", "Business workflow tools"], usd: "$7,300 – $12,100", tzs: "TSh 18M – 30M", featured: true },
-  { n: "4", time: "5–8 weeks", title: "E-Commerce Website", desc: "A complete online store for selling products or services with payment and order management.", best: "Businesses selling products or services online", features: ["Product catalog", "Shopping cart", "Order management", "Mobile money payments", "Admin dashboard"], usd: "$4,700 – $8,150", tzs: "TSh 11.7M – 20M" },
-  { n: "5", time: "8–12+ weeks", title: "Custom Web Application", desc: "A fully tailored platform built around your workflows — SaaS products, MVPs, portals, and complex internal systems.", best: "Startups needing a custom platform, SaaS or MVP", features: ["Custom architecture", "Advanced features", "Scalable backend", "Role-based access", "Consultation & planning"], usd: "$18,000 – $35,800", tzs: "TSh 45M – 90M" },
-  { n: "6", time: "1–3 months", title: "SEO Services", desc: "Search engine optimization to improve website visibility and attract organic traffic.", best: "Businesses looking to rank higher on Google", features: ["Keyword optimization", "On-page SEO", "Performance monitoring", "SEO reporting"], usd: "$430 – $1,050", tzs: "TSh 1M – 2.6M" },
-  { n: "7", time: "Monthly", title: "Website Maintenance", desc: "Ongoing support to keep your site secure, updated, and running — bug fixes, backups, and uptime monitoring.", best: "Existing website owners wanting peace of mind", features: ["Bug fixes", "Content updates", "Backups", "Uptime monitoring"], usd: "$110 – $240 / mo", tzs: "TSh 275k – 600k / mo" },
+  {
+    n: "1",
+    time: "3–5 days",
+    title: "Starter Landing Page",
+    desc: "A clean, mobile-friendly one-page website for individuals, freelancers and small businesses establishing an online presence.",
+    best: "Small businesses, personal brands and service providers",
+    features: [
+      "One-page responsive website",
+      "Business introduction and services",
+      "Contact information and WhatsApp button",
+      "Contact form",
+      "Basic SEO setup",
+      "Website deployment",
+    ],
+    usd: "$95 – $175",
+    tzs: "TSh 250k – 450k",
+  },
+  {
+    n: "2",
+    time: "1–2 weeks",
+    title: "Business Website",
+    desc: "A professional multi-page website to showcase your business, services, products and contact information.",
+    best: "Established small businesses and growing companies",
+    features: [
+      "Up to 5–7 pages",
+      "Custom responsive design",
+      "About, services and contact pages",
+      "Image gallery or portfolio",
+      "WhatsApp and contact form integration",
+      "Basic technical SEO",
+      "Deployment and handover",
+    ],
+    usd: "$230 – $460",
+    tzs: "TSh 600k – 1.2M",
+    featured: true,
+  },
+  {
+    n: "3",
+    time: "3–6 weeks",
+    title: "Custom Business System",
+    desc: "A database-driven application designed to help businesses manage everyday operations such as bookings, inventory, customers and records.",
+    best: "Businesses looking to digitize manual processes",
+    features: [
+      "Custom admin dashboard",
+      "User accounts and authentication",
+      "Database design",
+      "Core business workflows",
+      "Basic reporting",
+      "Role-based permissions where required",
+      "Testing and deployment",
+    ],
+    usd: "$690 – $1,730",
+    tzs: "TSh 1.8M – 4.5M",
+  },
+  {
+    n: "4",
+    time: "3–6 weeks",
+    title: "E-Commerce Website",
+    desc: "An online store where customers can browse products, place orders and contact your business or pay online.",
+    best: "Retail shops, cosmetics brands and product businesses",
+    features: [
+      "Product catalogue and categories",
+      "Product detail pages",
+      "Shopping cart and checkout",
+      "Order management",
+      "Mobile money or payment integration",
+      "Admin product management",
+      "Mobile-friendly design",
+    ],
+    usd: "$575 – $1,345",
+    tzs: "TSh 1.5M – 3.5M",
+  },
+  {
+    n: "5",
+    time: "Scoped per project",
+    title: "Custom Web Application",
+    desc: "A tailored web platform for more complex requirements, including customer portals, booking platforms, internal tools and startup MVPs.",
+    best: "Startups and businesses with specific software requirements",
+    features: [
+      "Requirements and feature planning",
+      "Custom frontend and backend",
+      "Database and API development",
+      "Authentication and user roles",
+      "Third-party integrations where required",
+      "Testing and deployment",
+      "Technical handover",
+    ],
+    usd: "From $1,150",
+    tzs: "From TSh 3M",
+  },
+  {
+    n: "6",
+    time: "3–7 days",
+    title: "SEO Setup & Optimization",
+    desc: "Improve your website's technical SEO foundations and make it easier for search engines to understand your content.",
+    best: "Businesses with existing websites",
+    features: [
+      "Page titles and meta descriptions",
+      "Heading structure review",
+      "Image optimization",
+      "Sitemap and robots.txt",
+      "Google Search Console setup",
+      "Basic technical SEO review",
+    ],
+    usd: "$60 – $135",
+    tzs: "TSh 150k – 350k",
+  },
+  {
+    n: "7",
+    time: "Monthly",
+    title: "Website Maintenance",
+    desc: "Practical ongoing support to keep your website updated, functional and working as expected.",
+    best: "Businesses with existing websites",
+    features: [
+      "Minor bug fixes",
+      "Small content and image updates",
+      "Routine dependency updates",
+      "Basic backup checks",
+      "Technical troubleshooting",
+      "Up to 2–4 support hours monthly",
+    ],
+    usd: "$25 – $60 / mo",
+    tzs: "TSh 60k – 150k / mo",
+  },
 ];
+
+
 
 /* ---------------- SKILLS ---------------- */
 export const SKILLS = [
-  { area: "Frontend", tools: ["TypeScript", "React", "Next.js", "Tailwind CSS", "Shadcn UI"] },
-  { area: "Backend", tools: ["Node.js", "Express", "REST APIs", "JWT & OAuth", "PHP"] },
-  { area: "Database", tools: ["PostgreSQL", "MySQL", "Prisma ORM", "Data modeling"] },
-  { area: "Deployment", tools: ["Linux", "NGINX", "Apache", "CI/CD", "Uptime monitoring"] },
-  { area: "Collaboration", tools: ["Git", "GitHub", "Code reviews", "Async handover"] },
-  { area: "AI-Assisted Dev", tools: ["Claude", "Cursor", "Lovable", "OpenCode"] },
+  {
+    area: "Frontend",
+    tools: [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Vite",
+      "HTML",
+      "CSS",
+      "Tailwind CSS",
+      "Bootstrap",
+    ],
+  },
+  {
+    area: "Backend",
+    tools: [
+      "PHP",
+      "Laravel",
+      "Python",
+      "FastAPI",
+      "Flask",
+      "REST APIs",
+    ],
+  },
+  {
+    area: "Database & Storage",
+    tools: [
+      "MySQL",
+      "PostgreSQL",
+      "SQLite",
+      "Firebase Firestore",
+      "Redis",
+      "SQL",
+    ],
+  },
+  {
+    area: "Mobile Development",
+    tools: [
+      "Flutter",
+      "React Native",
+      "Java",
+      "Android Development",
+    ],
+  },
+  {
+    area: "Machine Learning",
+    tools: [
+      "Python",
+      "Scikit-learn",
+      "Data Preprocessing",
+      "Classification",
+      "Regression",
+      "Model Evaluation",
+    ],
+  },
+  {
+    area: "Tools & Deployment",
+    tools: [
+      "Git",
+      "GitHub",
+      "Docker",
+      "Linux",
+      "NGINX",
+      "Postman",
+      "Vercel",
+      "Netlify",
+    ],
+  },
+  {
+    area: "AI-Assisted Development",
+    tools: [
+      "AI Coding Assistants",
+      "Prompt Engineering",
+      "AI-Assisted Debugging",
+    ],
+  },
 ];
+
 
 /* ---------------- TESTIMONIALS ---------------- */
 export const TESTIMONIALS = [
@@ -265,7 +562,7 @@ export const TESTIMONIALS = [
     role: "Kibalit"
   },
   {
-    quote: "Working with Jonas on our tours website was a positive experience. He understood what we wanted to achieve and worked to translate our ideas into a functional online presence.",
+    quote: "Working with Jonas was a positive experience. He understood what we wanted to achieve and worked to translate our ideas into a functional online presence.",
     name: "Balbina K.",
     role: "Balbina Safaris"
   },
