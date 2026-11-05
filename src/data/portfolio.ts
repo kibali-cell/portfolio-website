@@ -392,7 +392,7 @@ export const TIERS = [
       "Testing and deployment",
     ],
     usd: "$690 – $1,730",
-    tzs: "TSh 1.8M – 4.5M",
+    tzs: "TSh 1.8M – 4M",
   },
   {
     n: "4",
